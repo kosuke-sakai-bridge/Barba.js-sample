@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="ja"><head prefix="og:http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>フォーム｜Barba.js sample</title>
+  <meta name="description" content="サンプルテキストです（150文字前後）。">
+  <meta name="author" content="サンプルテキスト">
+  <link rel="shortcut icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="shortcut icon" sizes="”16×16″" href="/assets/images/favicon16.ico">
+  <link rel="shortcut icon" sizes="”32×32″" href="/assets/images/favicon32.ico">
+  <link rel="shortcut icon" sizes="”48×48″" href="/assets/images/favicon48.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/touch180.png">
+  <link rel="canonical" href="/form/">
+  <meta name="viewport" content="width=device-width,viewport-fit=cover">
+  <meta name="theme-color" content="#000">
+  <meta property="og:site_name" content="Barba.js sample">
+  <meta property="og:title" content="フォーム｜Barba.js sample">
+  <meta property="og:description" content="サンプルテキストです（150文字前後）。">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="/form/">
+  <meta property="og:image" content="/assets/images/ogpimg.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="サンプルテキスト">
+  <meta name="twitter:creator" content="サンプルテキスト">
+  <link rel="preload" as="style" href="/assets/css/style.css?rev=273a8b80e7f7d34b">
+  <link rel="preload" as="script" href="/assets/js/bundle.js?rev=273a8b80e7f7d34b">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;family=Poppins:wght@500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css?rev=273a8b80e7f7d34b">
+</head>
+
+<body data-barba="wrapper" id="gotop" class="form">
+  <div class="l-body">
+    <!--#include virtual="/ssi/header.html" -->
+    <div class="l-wrapper">
+      <div class="l-content">
+        <main class="l-main">
+          <div class="l-breadcrumbs">
+            <nav>
+              <ol vocab="https://schema.org/" typeof="BreadcrumbList">
+                <li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="ホーム" href="/"><span property="name">ホーム</span></a>
+                  <meta property="position" content="1">
+                </li>
+                <li property="itemListElement" typeof="ListItem"><span property="name">フォーム</span>
+                  <meta property="position" content="2">
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <form action="" method="POST" class="c-form js-form">
+            <table>
+              <colgroup></colgroup>
+              <tbody><tr>
+                <th>テキストボックス <span class="c-form__required">必須</span></th>
+                <td><input name="" type="text" value="" class="js-validate" required="">
+                  <p class="c-form__errormsg">※ テキストボックスを入力してください</p>
+                </td>
+              </tr>
+              <tr>
+                <th>テキストボックス02</th>
+                <td><input name="" type="text" value=""></td>
+              </tr>
+              <tr>
+                <th>メールアドレス <span class="c-form__required">必須</span></th>
+                <td><input name="" type="email" value="" placeholder="例：hogehoge@aaa.co.jp" class="js-validate" required="">
+                  <p class="c-form__errormsg">※ メールアドレスを正しく入力してください</p>
+                </td>
+              </tr>
+              <tr>
+                <th>電話番号 <span class="c-form__required">必須</span></th>
+                <td><input name="" type="tel" value="" placeholder="例：012-3456-7890" class="js-validate" pattern="\d{2,4}-?\d{2,4}-?\d{3,4}" required="">
+                  <p class="c-form__errormsg">※ 電話番号を正しく入力してください</p>
+                </td>
+              </tr>
+              <tr>
+                <th>FAX番号</th>
+                <td><input name="" type="tel" value="" placeholder="例：012-3456-7890" class="js-validate" pattern="\d{2,4}-?\d{2,4}-?\d{3,4}">
+                  <p class="c-form__errormsg">※ FAX番号を半角数字で入力してください</p>
+                </td>
+              </tr>
+              <tr>
+                <th>セレクトボックス <span class="c-form__required">必須</span></th>
+                <td><select name="" class="js-validate" required="">
+                    <option value="">選択してください</option>
+                    <option value="1">回答01</option>
+                    <option value="2">回答02</option>
+                  </select>
+                  <p class="c-form__errormsg">※ セレクトボックスを選択してください</p>
+                </td>
+              </tr>
+              <tr>
+                <th>テキストエリア</th>
+                <td><textarea name=""></textarea></td>
+              </tr>
+            </tbody></table>
+            <nav><button name="" type="submit" class="js-submit">確認</button></nav>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/js/bundle.js?rev=273a8b80e7f7d34b" defer="defer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <script>
+    const loader = document.querySelector('.loader');
+    gsap.set(loader, {
+      scaleX: 0,
+      rotation: 10,
+      xPercent: -5,
+      yPercent: -50,
+      transformOrigin: 'left center',
+      autoAlpha: 1
+    });
+
+    function loaderIn() {
+      return gsap.fromTo(loader, {
+        rotation: 10,
+        scaleX: 0,
+        xPercent: -5
+      }, {
+        duration: 0.8,
+        xPercent: 0,
+        scaleX: 1,
+        rotation: 0,
+        ease: 'Power4.inOut',
+        transformOrigin: 'left center'
+      });
+    }
+
+    function loaderAway() {
+      return gsap.to(loader, {
+        duration: 0.8,
+        scaleX: 0,
+        xPercent: 5,
+        rotation: -10,
+        transformOrigin: 'right center',
+        ease: 'Power4.inOut'
+      });
+    }
+    barba.init({
+      transitions: [{
+        async leave() {
+          await loaderIn();
+        },
+        enter() {
+          loaderAway();
+        }
+      }]
+    })
+  </script>
+
+
+</body></html>
